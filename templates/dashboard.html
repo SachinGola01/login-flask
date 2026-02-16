@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='dashboard.css') }}">
+</head>
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">S</div>
+            <p>{{username}}'s Workspace</p>
+        </div>
+        <nav class="navbar">
+            <a href="#" class="btn">Home</a>
+            <a href="#" class="btn">Content</a>
+            <a href="#" class="btn">About</a>
+            <a href="#" class="btn">Help</a>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="hero card">
+            <p class="eyebrow">Overview</p>
+            <h1>Welcome back, {{ username }}</h1>
+            <p class="lead">
+                Your workspace is ready. Jump into tasks, review activity, and keep things moving.
+            </p>
+            <a href="#" class="cta">View Updates</a>
+        </section>
+
+        <section class="stats">
+            <article class="card stat">
+                <p class="label">Projects</p>
+                <h2>12</h2>
+                <span class="trend up">+3 this week</span>
+            </article>
+            <article class="card stat">
+                <p class="label">Completed</p>
+                <h2>84%</h2>
+                <span class="trend up">On track</span>
+            </article>
+            <article class="card stat">
+                <p class="label">Pending</p>
+                <h2>7</h2>
+                <span class="trend">Needs review</span>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

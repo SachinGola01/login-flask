@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">F</div>
+                <div>
+                    <p class="eyebrow">Welcome back</p>
+                    <h1>Sign in</h1>
+                </div>
+            </div>
+
+            <form class="form" method="post" action="/login">
+                <label class="field">
+                    <span>Username</span>
+                    <input type="text" name="username" placeholder="Enter your username" required>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="Enter your Email" required>
+
+
+                </label>
+
+                <label class="field">
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="Enter your password" required>
+
+                </label>
+
+                <div class="row">
+                    <label class="remember">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a class="link" href="#">Forgot password?</a>
+                </div>
+
+                <button class="btn" type="submit">Login</button>
+            </form>
+
+            <p class="note">Don’t have an account? <a class="link" href="#">Create one</a></p>
+        </section>
+    </main>
+</body>
+</html>
